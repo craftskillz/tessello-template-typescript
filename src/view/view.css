@@ -1,0 +1,16 @@
+main {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.count {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
