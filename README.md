@@ -37,6 +37,8 @@ With [just](https://github.com/casey/just): `just test`, `just typecheck`, `just
 
 From an up-to-date `main` with nothing to commit, run `just publish minor` (or `major`, `patch`, `fix`). It checks types and tests, builds and validates the package, raises the version in `package.json`, `package-lock.json` and `manifest.json`, commits, tags `v<version>` and pushes. The Release workflow then publishes the package on GitHub Pages as `<version>.zip`. A published version is never overwritten: a listing in the Marketplace is pinned to the fingerprint of its bytes.
 
+To list that version on the [Marketplace](https://tessello-marketplace.pages.dev/), once the Release workflow is green: download the published `.zip`, then run `npx tessello publish <version>.zip --url https://<account>.github.io/<repository>/<version>.zip --accept-terms`, which checks it as the Marketplace CI will and opens the pull request (read [PUBLISHING.md](https://github.com/craftskillz/tessello-marketplace/blob/main/PUBLISHING.md) first: `--accept-terms` is your acceptance). A new Module waits for the Maintainer's Approval; later versions are merged once the CI passes.
+
 ## License
 
 MIT
